@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/65282af564.js" crossorigin="anonymous"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: sans-serif;
+            
+        }
+        .contact_info{
+            
+            display: flex;
+            background-color: #272727;;
+            color: white;
+            
+            padding: 15px;
+        }
+        .address{
+            display: flex;
+        }
+        .social_networking a{
+            color: white;
+        }
+        .social_networking{
+            margin-left: auto;
+            /* margin-right: -180px; */
+        }
+        .address_phone{
+            display: flex;
+            /* margin-left: -180px;        */
+        }
+        .social_item{
+            margin: 8px;
+        }
+        .phones{
+            display: flex;
+        }
+        .phones a{
+            color: white;
+            text-decoration: none;
+        }
+        .address_phone_item{
+            margin: 0 8px;
+        }
+        @media screen and (max-width: 375px) {
+            .address_phone, .contact_info{
+                flex-direction: column;
+                align-items: center;
+            }
+            .social_networking{
+                margin-left: unset;
+            }          
+        }
+
+
+        .title_page{
+            position: relative;
+        }
+        .title_page_img img{
+            width: 100%;
+            filter: brightness(.5);
+        }
+        .manufax_search{
+            width: 100%;
+            position: absolute;
+            /* background-color: blueviolet; */
+            top: 0;
+            margin: 25px 0;
+        }
+        .manufax_search .manufax{
+            display: flex;
+            justify-content: space-around;
+        }
+        .home_object{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .home_item{
+            margin: 10px;
+        }
+        .home_item a{
+            text-decoration: none;
+            color: white;
+        }
+        .magnifier{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+        .magnifier a{
+            color: white;
+        }
+        .construction{
+            width: 100%;
+            /* background-color: #398ffc; */
+            text-align: center;
+            color: white;
+            margin-top: 90px;
+        }
+        .construction_item{
+            font-size: 110px;         
+        }
+        .see_how_item{
+            font-size: 30px;
+            margin: 30px;
+        }
+        .see_our_recent_item{
+            background-color: #2ac5f4;
+            width: 284px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            border-radius: 5px;
+        }
+        .see_our_recent_item a{
+            font-size: 14px;
+            text-decoration: none;
+            color: white;
+        }
+        
+
+        .our_service_line{
+            border: 1px solid #2ac5f4;
+            width: 66px;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+        .our_service_space{
+            /* background-color: tomato; */
+            padding: 85px 0 70px 0;
+            margin: auto;
+        }
+        .our_service{
+            text-align: center;
+            font-size: 30px;
+        }
+        .building_modeling, .design_build, .modeling_item, .design_item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img_1{
+            font-size: 70px;
+            color: #2ac5f4;
+            margin: 30px;        
+        }
+        .headline_2{
+            font-size: 18px;
+            line-height: 34px;
+            margin-bottom: 10px;
+        }
+        .part_3{
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .newline{
+            width: 300px;
+            height: 215px;
+            padding: 30px 0;
+        }
+        
+        .our_history{
+            display: flex;
+            align-items: center;
+            background-color: #f6f6f7;
+            padding: 100px 0;
+        }
+        .text_history h1{
+            margin: 30px;
+            font-size: 28px;          
+        }
+        .text_history h2{
+            margin: 30px;
+            font-size: 18px;
+        }
+        .text_history p{
+            margin: 30px;
+            font-size: 18px;
+        }
+        .text_history .link{
+            margin: 30px;
+            font-size: 15px;
+            width: 160px;
+            height: 60px;
+            background-color: #2ac5f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px;
+        }
+        .text_history .link a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .commercial_imgs{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .commercial_imgs .item{
+            width: 25%;
+            height: 350px;
+            position: relative;
+        }
+        .commercial_imgs img{
+            width: 100%;
+            height: 100%;
+            vertical-align: top;
+        }
+        .commercial_imgs h3{
+            color: white;
+            position: relative;
+            bottom: 170px;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .news {
+            display: flex;
+            width: 100%;
+        }
+        .news .item{
+            width: 33%;
+            margin: 30px;      
+        }
+        .news .item img{
+            width: 100%;
+        }
+        .news .item a{
+            text-decoration: none;
+            color: #333333;
+            font-size: 20px;
+        }
+        .news .part{
+            margin-top: 40px;
+        }
+        .mini_word{
+            margin: 20px 0;
+        }
+
+        .recent_news{
+            text-align: center;
+        }
+ 
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="contact_info">
+
+        <div class="address_phone">
+            <div class="address">
+                <div class="address_phone_item" style="color: #398ffc;"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="address_phone_item"><p>Address: 4578 Marmora Road, Glasgow, D04 89GR</p></div>
+            </div>
+            <div class="phones">
+                <div class="address_phone_item" style="color: #398ffc;"><i class="fas fa-phone"></i></div>
+                <div class="address_phone_item"><a href="#">Phones: (800) 123-0045; (800) 123-0046</a></div>
+            </div>
+        </div>
+
+        <div class="social_networking">
+            <a href="" class="social_item"><i class="fab fa-twitter"></i></a>
+            <a href="" class="social_item"><i class="fab fa-facebook-f"></i></a>
+            <a href="" class="social_item"><i class="fab fa-vimeo-v"></i></a>
+            <a href="" class="social_item"><i class="fab fa-youtube"></i></a>
+            <a href="" class="social_item"><i class="fab fa-pinterest"></i></a>
+            <a href="" class="social_item"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+
+    <div class="title_page">     
+        <div class="title_page_img">            
+            <img src="/Manufax圖片/asset 1.png" alt="">
+        </div>
+        <div class="manufax_search">
+            <div class="manufax">
+                <img src="/Manufax圖片/asset 0.png" alt="">
+                <div class="home_object">
+                    <div class="home_item">
+                        <a href="">HOME</a>
+                    </div>
+                    <div class="home_item">
+                        <a href="">ABOUT</a>
+                    </div>
+                    <div class="home_item">
+                        <a href="">SERVICES</a>
+                    </div>
+                    <div class="home_item">
+                        <a href="">PROJECTS</a>
+                    </div>
+                    <div class="home_item">
+                        <a href="">BLOG</a>
+                    </div>
+                    <div class="home_item">
+                        <a href="">CONTACTS</a>
+                    </div>
+                </div>
+                <div class="magnifier">
+                    <a href=""><i class="fas fa-search"></i></a>
+                </div>
+            </div>
+
+            <div class="construction">
+                <div class="construction_item">
+                    CONSTRUCTION
+                </div>
+                <div class="see_how_item">
+                    SEE HOW A 10-STORIES TOWER'S BEING BUILT,IN A TIME-LAPSE
+                </div>
+                <div class="see_our_recent_item">
+                    <a href="#">SEE OUR RECENTS PROJECTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="our_service_space">
+        <div class="our_service_line">
+            <span></span>
+        </div>
+        <div class="our_service">OUR SERVICES</div>
+
+        <div class="building_modeling">
+            <div class="modeling_item">
+                <div class="img_1">
+                    <i class="fas fa-home"></i>
+                </div>
+                <nav class="newline">
+                    <div class="headline_2">
+                        BUILDING INFORMATION MODELING
+                    </div>
+                    <div class="part_3">
+                        Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...
+                    </div>
+                </nav>
+            </div>
+            
+                <div class="modeling_item">
+                    <div class="img_1">
+                        <i class="fab fa-codepen"></i>
+                    </div>
+                    <nav class="newline">
+                        <div class="headline_2">
+                            CONSTRUCTION SERVICES
+                        </div>
+                        <div class="part_3">
+                            Our customers love the pace/quality tempo that we show during each of the principal construction processes! We're comfortable with any...
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="modeling_item">
+                    <div class="img_1">
+                        <i class="fas fa-th"></i>
+                    </div>
+                    <nav class="newline">
+                        <div class="headline_2">
+                            PRE-CONSTRUCTION SERVICES
+                        </div>
+                        <div class="part_3">
+                            We take our time on initial planning before any construction begins, to balance all the financial and efficiency issues beforehand.This...
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+
+        <div class="design_build">
+            <div class="design_item">
+                <div class="img_1">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <nav class="newline">
+                    <div class="headline_2">
+                        DESIGN-BUILD
+                    </div>
+                    <div class="part_3">
+                        If a project is not too complex, we may hire a designer-builder type of contractor, to make the longevity of...
+                    </div>
+                </nav>
+            </div>
+
+            <div class="design_item">
+                <div class="img_1">
+                    <i class="far fa-building"></i>
+                </div>
+                <nav class="newline">
+                    <div class="headline_2">
+                        CONSTRUCTION MANAGEMENT
+                    </div>
+                    <div class="part_3">
+                        Construction project management is essential. We're using the most time and iterationsefficient life cycles for that.As you may know,...
+                    </div>
+                </nav>
+            </div>
+            <div class="design_item">
+                <div class="img_1">
+                    <i class="far fa-address-book"></i>
+                </div>
+                <nav class="newline">
+                    <div class="headline_2">
+                        GENERAL CONTRACTING
+                    </div>
+                    <div class="part_3">
+                        We have a long list of professional contractors, whom our engineers and architects enjoy towork with on a majority...
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="our_history">
+        <div class="text_history">
+            <h1>OUR HISTORY</h1>
+            <h2>OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE VERY PEAK OF THE BUILDING FRENZY IN THE US…</h2>
+            <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may not sound like a lot, but if you estimate the manpower, working hours, materials, planning and correlating that were all involved in completing each separate project, then our productivity is immense!</p>
+            <div class="link">
+                <a href="">READ MORE</a>
+            </div>
+        </div>
+        <img src="/Manufax圖片/asset 4.png" alt="">
+    </div>
+
+    
+    <div class="commercial_imgs">
+        <div class="item">
+            <img src="/Manufax圖片/asset 8.jpeg" alt="">
+            <h3>COMMERCIAL</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 9.jpeg" alt="">
+            <h3>CULTURAL / LIFESTYLE</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 10.jpeg" alt="">
+            <h3>DATA / TECHNOLOGY</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 11.jpeg" alt="">
+            <h3>GOVERNMENT / EDUCATION</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 12.jpeg" alt="">
+            <h3>MILITARY</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 13.jpeg" alt="">
+            <h3>HEALTHCARE</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 14.jpeg" alt="">
+            <h3>MANUFACTURING / INDUSTRIAL</h3>
+        </div>
+        <div class="item">
+            <img src="/Manufax圖片/asset 15.jpeg" alt="">
+            <h3>WAREHOUSE / LOGISTICS</h3>
+        </div>
+ 
+    </div>
+
+
+
+    <div class="line">
+        <span></span>
+    </div>
+    <div class="recent_news">
+        <h2>RECENT NEWS</h2>
+    </div>
+    <div class="news">
+        <div class="item">
+            <img src="Manufax圖片/blog-27.jpg" alt="">
+            <div class="part">
+                <a href="">FUTURE PROOFING HOSPITALS</a>
+                <p class="mini_word">
+                    Posted by adminDecember 7, 2018
+                </p>
+                <p>By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety mechanisms, improve care, and…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Manufax圖片/blog-26.jpg" alt="">
+            <div class="part">
+                <a href="">BIKE PARTS WAREHOUSE, DE</a>
+                <p class="mini_word">
+                    Posted by adminDecember 7, 2018
+                </p>
+                <p>Delaware proved to be a very friendly place to work at… While invited there for completing a mid-sized warehouse for…</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="Manufax圖片/blog-28.jpg" alt="">
+            
+            <div class="part">
+                <a href="">JOY HOTEL & CASINO</a>
+                <p class="mini_word">
+                    Posted by adminDecember 7, 2018
+                </p>
+                <p>This hotel & casino complex is our most recent completed building… The whole structure that took us 6 months to…</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
